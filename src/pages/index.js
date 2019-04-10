@@ -1,6 +1,7 @@
 import React from 'react'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
+import HelmetWrapper from '../components/helmet-wrapper'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
 
@@ -12,7 +13,10 @@ class RootIndex extends React.Component {
 
     return (
       <div style={{ background: '#fff' }}>
-        <Helmet title={siteTitle} />
+        <HelmetWrapper
+          metaDescription="Home page of Vegard Haugstgvedt. On this site he shares videos of his presentations and occationally writes blog posts about accessibility and web development in general."
+          title={siteTitle}
+        />
         <Hero data={author.node} />
         <div className="wrapper">
           <h2 className="section-headline">Recent articles</h2>
